@@ -48,7 +48,8 @@ Still: `post-03.png` (1600 x 900)
 - Site: https://sift-agents.vercel.app/
 - Source: https://github.com/damage124151251/sift-agents
 - X: not supplied. Do not invent an official handle.
-- CA: soon. A dedicated dev wallet must be configured before discovery can run.
+- Dev wallet: `21tfESqa9Lq1g5FeCcKVqEPuSGDJ6xgdm6PMHcKJ5C8X`.
+- CA: soon. Discovery is active for a future SIFT launch by the dev wallet. The monitor checks every five minutes and publishes only a verified mint.
 
 ## Profile assets
 
