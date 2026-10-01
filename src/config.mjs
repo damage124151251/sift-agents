@@ -1,5 +1,5 @@
 export const DEV_WALLET = null;
-export const TOKEN_CA = null;
+export const TOKEN_CA = "CqV5w5NcD95HXaj8gxXy38y5EKbXkfF4WdmfaSZTpump";
 export const GITHUB_URL = "https://github.com/damage124151251/sift-agents";
 export const X_URL = null;
 export const AGENTS = [

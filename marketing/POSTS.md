@@ -49,7 +49,8 @@ Still: `post-03.png` (1600 x 900)
 - Source: https://github.com/damage124151251/sift-agents
 - X: not supplied. Do not invent an official handle.
 - Dev wallet: `21tfESqa9Lq1g5FeCcKVqEPuSGDJ6xgdm6PMHcKJ5C8X`.
-- CA: soon. Discovery is active for a future SIFT launch by the dev wallet. The monitor checks every five minutes and publishes only a verified mint.
+- CA: `CqV5w5NcD95HXaj8gxXy38y5EKbXkfF4WdmfaSZTpump`.
+- This operator-selected CA takes precedence over automatic discovery. Launch receipts are shown only when their mint matches the displayed CA.
 
 ## Profile assets
 

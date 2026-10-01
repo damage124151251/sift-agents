@@ -37,7 +37,9 @@ No repository code is executed. No GitHub token is deployed or sent by the produ
 
 ## Token discovery
 
-The production dev wallet is `21tfESqa9Lq1g5FeCcKVqEPuSGDJ6xgdm6PMHcKJ5C8X`. Discovery was activated at finalized Solana slot `452221068`. The watcher checks every five minutes; CA remains `soon` until a qualifying launch is verified. Wallet configuration is stored in the private runtime state, independently of frontend constants. Repository agents work independently of the token watcher.
+The operator-selected CA is `CqV5w5NcD95HXaj8gxXy38y5EKbXkfF4WdmfaSZTpump`, configured in `src/config.mjs`. It takes precedence over automatic discovery and does not inherit a different mint's launch receipt.
+
+The production dev wallet is `21tfESqa9Lq1g5FeCcKVqEPuSGDJ6xgdm6PMHcKJ5C8X`. Discovery was activated at finalized Solana slot `452221068`. The watcher checks every five minutes until it verifies and pins a qualifying launch. Wallet configuration is stored in the private runtime state, independently of frontend constants. Repository agents work independently of the token watcher.
 
 Configure a public dev address in **Token monitor > Operator settings**, then review and activate. Activation records the current finalized Solana slot. The watcher checks for a future Pump token named **SIFT**, requiring the same wallet to sign as user and creator and an initialized mint account to exist. It pins a verified launch, not a transfer or purchase. Reconfiguring the wallet starts a new discovery window. No funds move.
 

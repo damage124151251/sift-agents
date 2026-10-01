@@ -1147,7 +1147,9 @@ function TokenMonitor({ identity, operator, busy, act, onClose, onAuth }) {
         <Radio size={20} />
         <span>
           {identity.tokenCA
-            ? "Contract detected"
+            ? identity.proof
+              ? "Contract verified"
+              : "Contract configured"
             : identity.wallet
               ? "Watching for a SIFT launch"
               : "Awaiting a development wallet"}
@@ -1166,7 +1168,11 @@ function TokenMonitor({ identity, operator, busy, act, onClose, onAuth }) {
           )}
         </dd>
         <dt>Watcher</dt>
-        <dd>{identity.watchStatus || "unconfigured"}</dd>
+        <dd>
+          {identity.tokenCA && !identity.proof && identity.watchStatus === "verified"
+            ? "Earlier launch verified"
+            : identity.watchStatus || "unconfigured"}
+        </dd>
         <dt>Last check</dt>
         <dd>{stamp(identity.checkedAt)}</dd>
         <dt>Activation slot</dt>
@@ -1237,8 +1243,9 @@ function TokenMonitor({ identity, operator, busy, act, onClose, onAuth }) {
       ) : (
         <>
           <p className="fineprint">
-            The CA appears after a matching Pump creation and initialized mint
-            are verified. A development wallet is not a token address.
+            {identity.tokenCA && !identity.proof
+              ? "This CA was supplied by the project operator. A launch receipt is shown only when the watcher verifies the same mint."
+              : "The CA appears after a matching Pump creation and initialized mint are verified. A development wallet is not a token address."}
           </p>
           {identity.wallet && (
             <div className="wallet-value">
